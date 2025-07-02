@@ -1,6 +1,9 @@
+require('dotenv').config();
+const TOKEN = process.env.TELEGRAM_TOKEN;
+
 const { Telegraf, Markup } = require('telegraf');
 
-const bot = new Telegraf('ТВОЙ_ТОКЕН');
+const bot = new Telegraf(TOKEN);
 
 const sessions = new Map();
 
